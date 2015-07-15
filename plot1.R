@@ -1,0 +1,5 @@
+source("get_and_clean_data.R")
+datesOfInterest <- get_and_clean_data()
+png("Plot1.png")
+hist(as.numeric(datesOfInterest$Global_active_power),col="red",main="Global Active Power",xlab="Global Active Power(kilowatts)")
+dev.off()
